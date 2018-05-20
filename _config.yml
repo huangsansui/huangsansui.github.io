@@ -92,4 +92,4 @@ backup:
     theme: next
     repository:
        github: git@github.com:huangsansui/huangsansui.github.io.git
-       branch: master
+    branch: master
