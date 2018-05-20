@@ -91,5 +91,4 @@ backup:
     type: git
     theme: next
     repository:
-       github: git@github.com:huangsansui/huangsansui.github.io.git
-    branch: master
+       github: git@github.com:huangsansui/huangsansui.github.io.git,blog
