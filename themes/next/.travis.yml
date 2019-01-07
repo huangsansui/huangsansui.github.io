@@ -10,6 +10,22 @@ install: npm install
 before_script:
   - npm install -g gulp
 
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "huangsansui"
+  - git config user.email "674208615@qq.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${blog}@${GH_REF}" master:master
+
+branches:
+  only:
+    - blog-resource
+env:
+ global:
+   - GH_REF: github.com/huangsansui/huangsansui.github.io
+
 addons:
   browserstack:
     username: "ivannginx1"
