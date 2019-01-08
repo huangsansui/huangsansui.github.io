@@ -1,8 +1,10 @@
 ---
 title: LeetCode刷题记录
 date: 2019-01-09 01:15:41
-categories: leetcode
-tags: [leetcode,算法]
+categories: "leetcode"
+tags: 
+    -leetcode
+    -算法
 ---
 
 ![image](https://wx3.sinaimg.cn/large/006fuqy4gy1fyzoigp2b4j31hc0u0tkx.jpg)
