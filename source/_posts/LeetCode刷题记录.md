@@ -78,3 +78,17 @@ tags:
 这道题主要使用了队列先进先出特性和遍历，开始想用递归的方式进行发现行不通。先将元素加入队列,判断队列的长度得知需要遍历的次数，通过遍历拿到该元素下left,right元素并加入队列。
 
 ![image](https://ws2.sinaimg.cn/mw690/e3244c0fly1fz5d1012f6j210g11e0zn.jpg)
+
+## 第 6 天 买卖股票的最佳时机
+- 题号： 121 买卖股票的最佳时机
+- 问题描述：
+ 
+![image](https://wx1.sinaimg.cn/mw690/e3244c0fly1fz6efdphwdj20xg0n2jv3.jpg)
+
+解题思路：
+我的解法是，两次遍历，找出最大的子差，实现比较简单，但性能也不好，时间复杂度为O(n^2),之后看了大神的代码，这里讲到了Kadane's Algorithm算法，具体思想参考：
+[Loading](https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98)
+
+![image](https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6ei7bf9vj20z20te78f.jpg)
+
+![image](https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6eik2pggj214o0jewhj.jpg)
