@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="-leetcode -算法,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HuangQing's Notes" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="keywords" content="-leetcode -算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode刷题记录">
+<meta property="og:url" content="http://huangqing.top/2019/01/09/LeetCode刷题记录/index.html">
+<meta property="og:site_name" content="HuangQing&#39;s Notes">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fuqy4gy1fyzoigp2b4j31hc0u0tkx.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/mw690/006fuqy4gy1fyzq1mf7o7j30xe08w0ty.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/mw690/006fuqy4gy1fyzqb50pnnj31180pe42o.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/006fuqy4gy1fyzqbrebgtj310s13en2q.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/006fuqy4ly1fz0dnzpy5dj30gz0budg7.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/mw690/006fuqy4ly1fz0do9geoaj31800teadh.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/006fuqy4ly1fz0dof8swaj31800medil.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/006fuqy4gy1fz1uuafcjgj30x40msgnp.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/006fuqy4gy1fz1v7hbncgj30w40oejuz.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/mw690/006fuqy4gy1fz330ro7vqj30xi0e60un.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/mw690/006fuqy4gy1fz3315t8nlj30xm0qedjf.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/e3244c0fly1fz5d0ljh59j20xg0mugnj.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/mw690/e3244c0fly1fz5d1012f6j210g11e0zn.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/e3244c0fly1fz6efdphwdj20xg0n2jv3.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6ei7bf9vj20z20te78f.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6eik2pggj214o0jewhj.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw690/006fuqy4ly1fz71ykcjqzj30gs09aq32.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz71zlgqwdj31800lediv.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz720ybi0jj31f80pegpu.jpg">
+<meta property="og:updated_time" content="2019-01-15T02:23:32.978Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode刷题记录">
+<meta name="twitter:image" content="https://wx3.sinaimg.cn/large/006fuqy4gy1fyzoigp2b4j31hc0u0tkx.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://huangqing.top/2019/01/09/LeetCode刷题记录/">
+
+
+
+
+
+  <title>LeetCode刷题记录 | HuangQing's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!--顶部右上角github-->
+    <a href="https://github.com/huangsansui" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg>
+    </a>
+    <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+    </style>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HuangQing's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input">
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'j_4NsHx8KPb2A5SiqMYB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://huangqing.top/2019/01/09/LeetCode刷题记录/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄庆">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HuangQing's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LeetCode刷题记录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-09T01:15:41+00:00">
+                2019-01-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/09/LeetCode刷题记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/01/09/LeetCode刷题记录/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/09/LeetCode刷题记录/" class="leancloud_visitors" data-flag-title="LeetCode刷题记录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://wx3.sinaimg.cn/large/006fuqy4gy1fyzoigp2b4j31hc0u0tkx.jpg" alt="image"></p>
+<a id="more"></a>
+<h2 id="第-1-天-有效的括号"><a href="#第-1-天-有效的括号" class="headerlink" title="第 1 天 有效的括号"></a>第 1 天 有效的括号</h2><ul>
+<li>题号： 20 有效的括号 （Valid Parentheses）</li>
+<li>问题描述：</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/mw690/006fuqy4gy1fyzq1mf7o7j30xe08w0ty.jpg" alt="image"></p>
+<ul>
+<li>解题思路：</li>
+<li>第一种解法：利用堆栈先进先出的思想（LIFO），判断如果为左括号则将右括号压入栈顶，相当于将正确的格式已经确定，当碰到右括号时则弹出栈顶，对比是否跟压入的相同。</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/mw690/006fuqy4gy1fyzqb50pnnj31180pe42o.jpg" alt="image"></p>
+<ul>
+<li>第二种解法：利用匹配的思想，利用head参数作为游标，左括号顺序存入，head++，碰到右括号时拿出下标为–head的值对比是否为对应的左括号。<br>心得体会：通过这道题，理解了堆栈的思想以及运用方式，对于这种题目算是有一个认识，遇到类似需要左右匹配的时候可以考虑堆栈的原理。</li>
+</ul>
+<p><img src="https://wx3.sinaimg.cn/mw690/006fuqy4gy1fyzqbrebgtj310s13en2q.jpg" alt="image"></p>
+<ul>
+<li>心得体会：通过这道题，理解了堆栈的思想以及运用方式，对于这种题目算是有一个认识，遇到类似需要左右匹配的时候可以考虑堆栈的原理。</li>
+</ul>
+<h2 id="第-2-天-删除排序数组中的重复项"><a href="#第-2-天-删除排序数组中的重复项" class="headerlink" title="第 2 天 删除排序数组中的重复项"></a>第 2 天 删除排序数组中的重复项</h2><ul>
+<li>题号： 26 删除排序数组中的重复项 </li>
+<li>问题描述：</li>
+</ul>
+<p><img src="https://wx4.sinaimg.cn/mw690/006fuqy4ly1fz0dnzpy5dj30gz0budg7.jpg" alt="image"></p>
+<ul>
+<li>解题思路：</li>
+<li>第一种解法：暴力法，时间复杂度On^2),基本思路就是碰到相同的就把该元素移除,把后面的元素全都往前挪一位。</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/mw690/006fuqy4ly1fz0do9geoaj31800teadh.jpg" alt="image"></p>
+<ul>
+<li>第二种解法：时间复杂度O(n),用一个变量id标记无重复数组的下标位置，初始为1.循环当碰到nums[i] != nums[i-1]时，把nums[i]赋值给nums[id],再对id自增。</li>
+</ul>
+<p><img src="https://wx1.sinaimg.cn/mw690/006fuqy4ly1fz0dof8swaj31800medil.jpg" alt="image"></p>
+<ul>
+<li>心得体会：对于一道题的不同解法，对程序带来的运算时间差别很大，前一种耗时106ms，第二种耗时13ms。可见时间复杂度对算法来说很重要，这道题主要是学会如何利用下标在同一个数组中操作，这种操作的种类是有限的，学一种少一种，多思考，以后再碰到就会了。</li>
+</ul>
+<h2 id="第-3-天-搜索插入位置"><a href="#第-3-天-搜索插入位置" class="headerlink" title="第 3 天 搜索插入位置"></a>第 3 天 搜索插入位置</h2><ul>
+<li>题号： 35 搜索插入位置 </li>
+<li>问题描述：</li>
+</ul>
+<p><img src="http://wx2.sinaimg.cn/large/006fuqy4gy1fz1uuafcjgj30x40msgnp.jpg" alt="leetcode35"></p>
+<ul>
+<li>解题思路：</li>
+<li>本题采用二分查找法思想，唯一不同的是：此题需要的返回值为目标元素插入的下标位置，也就是说，如果数组中没有相同的元素，则插入比目标元素小且最最近接元素的后面，若存在相同元素，则插在第一个相同元素位置。该题在二分查找基础上，在循环时多循环了一次，这样则能满足需求。</li>
+</ul>
+<p><img src="http://wx3.sinaimg.cn/large/006fuqy4gy1fz1v7hbncgj30w40oejuz.jpg" alt="leetcode35"></p>
+<ul>
+<li>心得体会：对于这样一道题，我花了还是比较长的时间去思考和反复debug，可能是自己练习太少，同时对建立模型不够熟练。不过结果还算满意，虽然是一到简单难度的题，但使我更熟悉二分查找法的运用。尴尬的是这道题我从头遍历（时间复杂度O(n)）比二分查找法（时间复杂度O(n logn))耗时要短。</li>
+</ul>
+<h2 id="第-4-天-最大子序和"><a href="#第-4-天-最大子序和" class="headerlink" title="第 4 天 最大子序和"></a>第 4 天 最大子序和</h2><ul>
+<li>题号： 53 最大子序和</li>
+<li>问题描述：</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/mw690/006fuqy4gy1fz330ro7vqj30xi0e60un.jpg" alt="image"></p>
+<ul>
+<li>解题思路：</li>
+<li>这道题主要思想动态规划算法(DP)，概念很难说清楚。对于本题，从头遍历数组，sum用来保存临时和，max则保存子序和最大值，当sum&gt;max时给max赋值，当sum&lt;0时重新计算子序和（因为sum&lt;0时，不管下一个元素是正数还是负数，都有sum + num[i+1] &lt; num[i+1] ）</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/mw690/006fuqy4gy1fz3315t8nlj30xm0qedjf.jpg" alt="image"></p>
+<ul>
+<li>心得体会：差点忘了要打卡的事情，很感谢群主的这个活动，让我接触到算法，让我忧愁又欢喜，或许努力只有坚持了才叫努力，对于动态规划，我粗略的看了一下，因为工作的原因没深入研究，有机会要好好去了解，来自老年人的打卡。</li>
+</ul>
+<h2 id="第-5-天-二叉树的层次遍历-II"><a href="#第-5-天-二叉树的层次遍历-II" class="headerlink" title="第 5 天 二叉树的层次遍历 II"></a>第 5 天 二叉树的层次遍历 II</h2><ul>
+<li>题号： 108 二叉树的层次遍历 II</li>
+<li>问题描述：</li>
+</ul>
+<p><img src="https://wx4.sinaimg.cn/mw690/e3244c0fly1fz5d0ljh59j20xg0mugnj.jpg" alt="image">- 解题思路：<br>这道题主要使用了队列先进先出特性和遍历，开始想用递归的方式进行发现行不通。先将元素加入队列,判断队列的长度得知需要遍历的次数，通过遍历拿到该元素下left,right元素并加入队列。</p>
+<p><img src="https://ws2.sinaimg.cn/mw690/e3244c0fly1fz5d1012f6j210g11e0zn.jpg" alt="image"></p>
+<h2 id="第-6-天-买卖股票的最佳时机"><a href="#第-6-天-买卖股票的最佳时机" class="headerlink" title="第 6 天 买卖股票的最佳时机"></a>第 6 天 买卖股票的最佳时机</h2><ul>
+<li>题号： 121 买卖股票的最佳时机</li>
+<li>问题描述：</li>
+</ul>
+<p><img src="https://wx1.sinaimg.cn/mw690/e3244c0fly1fz6efdphwdj20xg0n2jv3.jpg" alt="image"></p>
+<p>解题思路：<br>我的解法是，两次遍历，找出最大的子差，实现比较简单，但性能也不好，时间复杂度为O(n^2),之后看了大神的代码，这里讲到了Kadane’s Algorithm算法，具体思想参考：<br><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98" target="_blank" rel="noopener">Loading</a></p>
+<p><img src="https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6ei7bf9vj20z20te78f.jpg" alt="image"></p>
+<p><img src="https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6eik2pggj214o0jewhj.jpg" alt="image"></p>
+<h2 id="第-7-天-只出现一次的数字"><a href="#第-7-天-只出现一次的数字" class="headerlink" title="第 7 天 只出现一次的数字"></a>第 7 天 只出现一次的数字</h2><ul>
+<li>题号： 136 只出现一次的数字</li>
+<li>问题描述：</li>
+</ul>
+<p><img src="https://wx2.sinaimg.cn/mw690/006fuqy4ly1fz71ykcjqzj30gs09aq32.jpg" alt="image"></p>
+<p>解题思路：<br>解题思路：<br>第一种思路：一般就是我的思路，一般也是不好的思路。题目要求是线性计算，那么我们只能用一个for循环，题目描述中说明只有一个数出现一次，其他为两次。对于重复元素，我想到了 Set,利用 Set 不能保存相同元素的特性来做。</p>
+<p><img src="https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz71zlgqwdj31800lediv.jpg" alt="image"></p>
+<p>第二种思路：这种思路就比较有意思了，虽然上面用了set能够解决问题，但是这种以空间换时间的方式不可取，如果数量很大的时候，很可能造成内存泄漏的问题。这里用了异或运算（XOR），不太明白异或运算的同学可以参考：<a href="https://www.cnblogs.com/JhSonD/p/6374397.html" target="_blank" rel="noopener">Loading</a>。这里异或运算满足交换律、结合律。对于 1^2^…^n^…^n^…^1000，无论这两个n出现在什么位置，都可以转换成为1^2^…^1000^(n^n)的形式。其次，对于任何数x，都有x^x=0，x^0=x。</p>
+<p><img src="https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz720ybi0jj31f80pegpu.jpg" alt="image"></p>
+<p>心得体会：很开心完成了刷题打卡的基本任务，虽然我刷的全是easy难度的题目，而且还常常写不出来看大神的解法，但是我也能从这个过程中学习到不少东西，以前畏惧算法一直不敢接近，现在成为一种习惯，就跟玩游戏一样，慢慢积攒实力，打怪升级买装备，最后才能打败boss。希望自己能继续坚持刷题，明年换个不错的公司。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode-算法/" rel="tag"># -leetcode -算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/15/OSSClient导致内存泄漏：This is very likely to create a memory leak/" rel="next" title="OSSClient导致内存泄漏：This is very likely to create a memory leak">
+                <i class="fa fa-chevron-left"></i> OSSClient导致内存泄漏：This is very likely to create a memory leak
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="黄庆">
+            
+              <p class="site-author-name" itemprop="name">黄庆</p>
+              <p class="site-description motion-element" itemprop="description">越学习，越发现自己的无知。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/huangsansui" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/u/3810806799?refer_flag=1005055013_&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-weibo"></i>微博</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-1-天-有效的括号"><span class="nav-number">1.</span> <span class="nav-text">第 1 天 有效的括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-2-天-删除排序数组中的重复项"><span class="nav-number">2.</span> <span class="nav-text">第 2 天 删除排序数组中的重复项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-3-天-搜索插入位置"><span class="nav-number">3.</span> <span class="nav-text">第 3 天 搜索插入位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-4-天-最大子序和"><span class="nav-number">4.</span> <span class="nav-text">第 4 天 最大子序和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-5-天-二叉树的层次遍历-II"><span class="nav-number">5.</span> <span class="nav-text">第 5 天 二叉树的层次遍历 II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-6-天-买卖股票的最佳时机"><span class="nav-number">6.</span> <span class="nav-text">第 6 天 买卖股票的最佳时机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-7-天-只出现一次的数字"><span class="nav-number">7.</span> <span class="nav-text">第 7 天 只出现一次的数字</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黄庆</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 您是第
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      个来访者
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 本站被浏览
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'huangsansui',
+            repo: 'huangsansui.github.io',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'b7bd3416d869204538634d977efd7e94e796de45',
+            
+                client_id: '9a290af25f9b5b101d64'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("6Vn4zOs1K2yr6LuW5HUFigQm-gzGzoHsz", "P9sTkOnxSvuPmh7t1blNooVq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 线条 -->
+  <!--
+  
+  -->
+
+</body>
+</html>

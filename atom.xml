@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HuangQing&#39;s Notes</title>
+  <icon>https://www.gravatar.com/avatar/ff65186fcb57c4ae74f21d24c35bdacf</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://huangqing.top/"/>
+  <updated>2019-01-15T02:23:32.978Z</updated>
+  <id>http://huangqing.top/</id>
+  
+  <author>
+    <name>黄庆</name>
+    <email>674208615@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode刷题记录</title>
+    <link href="http://huangqing.top/2019/01/09/LeetCode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://huangqing.top/2019/01/09/LeetCode刷题记录/</id>
+    <published>2019-01-09T01:15:41.000Z</published>
+    <updated>2019-01-15T02:23:32.978Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://wx3.sinaimg.cn/large/006fuqy4gy1fyzoigp2b4j31hc0u0tkx.jpg" alt="image"></p><a id="more"></a><h2 id="第-1-天-有效的括号"><a href="#第-1-天-有效的括号" class="headerlink" title="第 1 天 有效的括号"></a>第 1 天 有效的括号</h2><ul><li>题号： 20 有效的括号 （Valid Parentheses）</li><li>问题描述：</li></ul><p><img src="https://ws3.sinaimg.cn/mw690/006fuqy4gy1fyzq1mf7o7j30xe08w0ty.jpg" alt="image"></p><ul><li>解题思路：</li><li>第一种解法：利用堆栈先进先出的思想（LIFO），判断如果为左括号则将右括号压入栈顶，相当于将正确的格式已经确定，当碰到右括号时则弹出栈顶，对比是否跟压入的相同。</li></ul><p><img src="https://ws1.sinaimg.cn/mw690/006fuqy4gy1fyzqb50pnnj31180pe42o.jpg" alt="image"></p><ul><li>第二种解法：利用匹配的思想，利用head参数作为游标，左括号顺序存入，head++，碰到右括号时拿出下标为–head的值对比是否为对应的左括号。<br>心得体会：通过这道题，理解了堆栈的思想以及运用方式，对于这种题目算是有一个认识，遇到类似需要左右匹配的时候可以考虑堆栈的原理。</li></ul><p><img src="https://wx3.sinaimg.cn/mw690/006fuqy4gy1fyzqbrebgtj310s13en2q.jpg" alt="image"></p><ul><li>心得体会：通过这道题，理解了堆栈的思想以及运用方式，对于这种题目算是有一个认识，遇到类似需要左右匹配的时候可以考虑堆栈的原理。</li></ul><h2 id="第-2-天-删除排序数组中的重复项"><a href="#第-2-天-删除排序数组中的重复项" class="headerlink" title="第 2 天 删除排序数组中的重复项"></a>第 2 天 删除排序数组中的重复项</h2><ul><li>题号： 26 删除排序数组中的重复项 </li><li>问题描述：</li></ul><p><img src="https://wx4.sinaimg.cn/mw690/006fuqy4ly1fz0dnzpy5dj30gz0budg7.jpg" alt="image"></p><ul><li>解题思路：</li><li>第一种解法：暴力法，时间复杂度On^2),基本思路就是碰到相同的就把该元素移除,把后面的元素全都往前挪一位。</li></ul><p><img src="https://ws4.sinaimg.cn/mw690/006fuqy4ly1fz0do9geoaj31800teadh.jpg" alt="image"></p><ul><li>第二种解法：时间复杂度O(n),用一个变量id标记无重复数组的下标位置，初始为1.循环当碰到nums[i] != nums[i-1]时，把nums[i]赋值给nums[id],再对id自增。</li></ul><p><img src="https://wx1.sinaimg.cn/mw690/006fuqy4ly1fz0dof8swaj31800medil.jpg" alt="image"></p><ul><li>心得体会：对于一道题的不同解法，对程序带来的运算时间差别很大，前一种耗时106ms，第二种耗时13ms。可见时间复杂度对算法来说很重要，这道题主要是学会如何利用下标在同一个数组中操作，这种操作的种类是有限的，学一种少一种，多思考，以后再碰到就会了。</li></ul><h2 id="第-3-天-搜索插入位置"><a href="#第-3-天-搜索插入位置" class="headerlink" title="第 3 天 搜索插入位置"></a>第 3 天 搜索插入位置</h2><ul><li>题号： 35 搜索插入位置 </li><li>问题描述：</li></ul><p><img src="http://wx2.sinaimg.cn/large/006fuqy4gy1fz1uuafcjgj30x40msgnp.jpg" alt="leetcode35"></p><ul><li>解题思路：</li><li>本题采用二分查找法思想，唯一不同的是：此题需要的返回值为目标元素插入的下标位置，也就是说，如果数组中没有相同的元素，则插入比目标元素小且最最近接元素的后面，若存在相同元素，则插在第一个相同元素位置。该题在二分查找基础上，在循环时多循环了一次，这样则能满足需求。</li></ul><p><img src="http://wx3.sinaimg.cn/large/006fuqy4gy1fz1v7hbncgj30w40oejuz.jpg" alt="leetcode35"></p><ul><li>心得体会：对于这样一道题，我花了还是比较长的时间去思考和反复debug，可能是自己练习太少，同时对建立模型不够熟练。不过结果还算满意，虽然是一到简单难度的题，但使我更熟悉二分查找法的运用。尴尬的是这道题我从头遍历（时间复杂度O(n)）比二分查找法（时间复杂度O(n logn))耗时要短。</li></ul><h2 id="第-4-天-最大子序和"><a href="#第-4-天-最大子序和" class="headerlink" title="第 4 天 最大子序和"></a>第 4 天 最大子序和</h2><ul><li>题号： 53 最大子序和</li><li>问题描述：</li></ul><p><img src="https://ws3.sinaimg.cn/mw690/006fuqy4gy1fz330ro7vqj30xi0e60un.jpg" alt="image"></p><ul><li>解题思路：</li><li>这道题主要思想动态规划算法(DP)，概念很难说清楚。对于本题，从头遍历数组，sum用来保存临时和，max则保存子序和最大值，当sum&gt;max时给max赋值，当sum&lt;0时重新计算子序和（因为sum&lt;0时，不管下一个元素是正数还是负数，都有sum + num[i+1] &lt; num[i+1] ）</li></ul><p><img src="https://ws4.sinaimg.cn/mw690/006fuqy4gy1fz3315t8nlj30xm0qedjf.jpg" alt="image"></p><ul><li>心得体会：差点忘了要打卡的事情，很感谢群主的这个活动，让我接触到算法，让我忧愁又欢喜，或许努力只有坚持了才叫努力，对于动态规划，我粗略的看了一下，因为工作的原因没深入研究，有机会要好好去了解，来自老年人的打卡。</li></ul><h2 id="第-5-天-二叉树的层次遍历-II"><a href="#第-5-天-二叉树的层次遍历-II" class="headerlink" title="第 5 天 二叉树的层次遍历 II"></a>第 5 天 二叉树的层次遍历 II</h2><ul><li>题号： 108 二叉树的层次遍历 II</li><li>问题描述：</li></ul><p><img src="https://wx4.sinaimg.cn/mw690/e3244c0fly1fz5d0ljh59j20xg0mugnj.jpg" alt="image">- 解题思路：<br>这道题主要使用了队列先进先出特性和遍历，开始想用递归的方式进行发现行不通。先将元素加入队列,判断队列的长度得知需要遍历的次数，通过遍历拿到该元素下left,right元素并加入队列。</p><p><img src="https://ws2.sinaimg.cn/mw690/e3244c0fly1fz5d1012f6j210g11e0zn.jpg" alt="image"></p><h2 id="第-6-天-买卖股票的最佳时机"><a href="#第-6-天-买卖股票的最佳时机" class="headerlink" title="第 6 天 买卖股票的最佳时机"></a>第 6 天 买卖股票的最佳时机</h2><ul><li>题号： 121 买卖股票的最佳时机</li><li>问题描述：</li></ul><p><img src="https://wx1.sinaimg.cn/mw690/e3244c0fly1fz6efdphwdj20xg0n2jv3.jpg" alt="image"></p><p>解题思路：<br>我的解法是，两次遍历，找出最大的子差，实现比较简单，但性能也不好，时间复杂度为O(n^2),之后看了大神的代码，这里讲到了Kadane’s Algorithm算法，具体思想参考：<br><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98" target="_blank" rel="noopener">Loading</a></p><p><img src="https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6ei7bf9vj20z20te78f.jpg" alt="image"></p><p><img src="https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6eik2pggj214o0jewhj.jpg" alt="image"></p><h2 id="第-7-天-只出现一次的数字"><a href="#第-7-天-只出现一次的数字" class="headerlink" title="第 7 天 只出现一次的数字"></a>第 7 天 只出现一次的数字</h2><ul><li>题号： 136 只出现一次的数字</li><li>问题描述：</li></ul><p><img src="https://wx2.sinaimg.cn/mw690/006fuqy4ly1fz71ykcjqzj30gs09aq32.jpg" alt="image"></p><p>解题思路：<br>解题思路：<br>第一种思路：一般就是我的思路，一般也是不好的思路。题目要求是线性计算，那么我们只能用一个for循环，题目描述中说明只有一个数出现一次，其他为两次。对于重复元素，我想到了 Set,利用 Set 不能保存相同元素的特性来做。</p><p><img src="https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz71zlgqwdj31800lediv.jpg" alt="image"></p><p>第二种思路：这种思路就比较有意思了，虽然上面用了set能够解决问题，但是这种以空间换时间的方式不可取，如果数量很大的时候，很可能造成内存泄漏的问题。这里用了异或运算（XOR），不太明白异或运算的同学可以参考：<a href="https://www.cnblogs.com/JhSonD/p/6374397.html" target="_blank" rel="noopener">Loading</a>。这里异或运算满足交换律、结合律。对于 1^2^…^n^…^n^…^1000，无论这两个n出现在什么位置，都可以转换成为1^2^…^1000^(n^n)的形式。其次，对于任何数x，都有x^x=0，x^0=x。</p><p><img src="https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz720ybi0jj31f80pegpu.jpg" alt="image"></p><p>心得体会：很开心完成了刷题打卡的基本任务，虽然我刷的全是easy难度的题目，而且还常常写不出来看大神的解法，但是我也能从这个过程中学习到不少东西，以前畏惧算法一直不敢接近，现在成为一种习惯，就跟玩游戏一样，慢慢积攒实力，打怪升级买装备，最后才能打败boss。希望自己能继续坚持刷题，明年换个不错的公司。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://wx3.sinaimg.cn/large/006fuqy4gy1fyzoigp2b4j31hc0u0tkx.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://huangqing.top/categories/leetcode/"/>
+    
+    
+      <category term="-leetcode -算法" scheme="http://huangqing.top/tags/leetcode-%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSSClient导致内存泄漏：This is very likely to create a memory leak</title>
+    <link href="http://huangqing.top/2018/08/15/OSSClient%E5%AF%BC%E8%87%B4%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%EF%BC%9AThis%20is%20very%20likely%20to%20create%20a%20memory%20leak/"/>
+    <id>http://huangqing.top/2018/08/15/OSSClient导致内存泄漏：This is very likely to create a memory leak/</id>
+    <published>2018-08-15T20:48:44.000Z</published>
+    <updated>2019-01-15T02:23:32.978Z</updated>
+    
+    <content type="html"><![CDATA[<p>##问题描述<br><strong>环境</strong>： Ubuntu_16， tomcat8<br>最近在使用tomcat发布项目到服务器上，最近两天前端的同志总是反馈，接口怎么调不通了。我心情也是很郁闷，为什么tomcat要跟我作对，竟然挂掉了。一开始不以为然，把tomcat重新启动，但是后来发现总会在我不经意的时候挂掉，这就相当尴尬了。<br><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=147112016,3077867825&amp;fm=27&amp;gp=0.jpg" alt="呵呵"></p><a id="more"></a><p>##报错信息<br>去查看了tomcat日志<br><code>a thread named [idle_connection_reaper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:<br> java.lang.Thread.sleep(Native Method)<br> com.aliyun.oss.common.comm.IdleConnectionReaper.run(IdleConnectionReaper.java:77)</code></p><p>第一时间看到<code>memory leak</code>，内存怎么会泄漏呢，搜索了一下</p><p>网上有很多说法：<br>最多的说法是<font color="red">tomcatc内存划分不足</font> ，有以下几种情况：</p><p>1.OutOfMemoryError： Java heap space<br>2.OutOfMemoryError： PermGen space<br>3.OutOfMemoryError： unable to create new native thread. </p><p><strong>Tomcat内存溢出解决方案</strong>：<br>　　对于前两种情况，在应用本身没有内存泄露的情况下可以用设置tomcat jvm参数来解决。（-Xms -Xmx -XX：PermSize -XX：MaxPermSize）<br>　　最后一种可能需要调整操作系统和tomcat jvm参数同时调整才能达到目的。<br>　　第一种：<strong>是堆溢出</strong>。<br>　　原因分析：<br>JVM堆的设置是指java程序运行过程中JVM可以调配使用的内存空间的设置.JVM在启动的时候会自动设置Heap size的值，其初始空间(即-Xms)是物理内存的1/64，最大空间(-Xmx)是物理内存的1/4。可以利用JVM提供的-Xmn -Xms -Xmx等选项可进行设置。Heap size 的大小是Young Generation 和Tenured Generaion 之和。<br>在JVM中如果98％的时间是用于GC且可用的Heap size 不足2％的时候将抛出此异常信息。<br>Heap Size 最大不要超过可用物理内存的80％，一般的要将-Xms和-Xmx选项设置为相同，而-Xmn为1/4的-Xmx值。<br>　　没有内存泄露的情况下，调整-Xms -Xmx参数可以解决。<br>　　-Xms：初始堆大小 ，tomcat默认分配128m<br>　　-Xmx：最大堆大小<br>　　-XX:PermSize  JVM初始分配的非堆内存<br>       -XX:MaxPermSize  JVM最大允许分配的非堆内存，按需分配</p><p>在linux下，设置tomcat内存划分大小，配置设置在<code>tomcat目录下的 bin/catalina.sh</code></p><p>添加：<code>JAVA_OPTS=”-Xms1024m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m”</code></p><p>##But 我碰到的并不是这个问题</p><p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1118582862,2504019671&amp;fm=27&amp;gp=0.jpg" alt="呸"></p><p>认真查看日志发现：</p><p><code> com.aliyun.oss.common.comm.IdleConnectionReaper.run(IdleConnectionReaper.java:77)</code></p><p>发现是阿里云oss造成的问题</p><p>故查阅资料</p><p><strong>发现在使用阿里云OSS存储时，OSS客户端专门建立了一个线程来管理其所需要的HTTP连接。而在业务中每次都会创建一个新的OSS客户端对象，那么每次也都会往该List中添加新的连接。由于这些连接对象一直被持有，所占用的内存无法释放，越到后面所创建的对象越多，占用的内存越大，一直到内存被使用完为止。</strong></p><p>这下就知道了为什么会内存泄漏了~</p><p>这就跟我们在使用JDBC创建数据库连接一样，创建了connection，却不关闭一个道理。</p><p>知道了原因，寻找解决方案</p><p>既然connection都有close()方法，那阿里云不会没有这个方法的。</p><p>查看官方文档~</p><p><font color="red">OSSClient有一个shutdown()方法关闭连接。<br><img src="http://image.mamicode.com/info/201805/20180508115743526577.png" alt="这里写图片描述"></font></p><p><img src="http://image.mamicode.com/info/201805/20180508115743605682.png" alt="这里写图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      简单记录一次内存泄露排查
+    
+    </summary>
+    
+      <category term="JVM" scheme="http://huangqing.top/categories/JVM/"/>
+    
+    
+      <category term="JVM" scheme="http://huangqing.top/tags/JVM/"/>
+    
+  </entry>
+  
+</feed>
