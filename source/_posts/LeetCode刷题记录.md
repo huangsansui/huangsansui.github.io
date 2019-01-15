@@ -92,3 +92,21 @@ tags:
 ![image](https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6ei7bf9vj20z20te78f.jpg)
 
 ![image](https://ws4.sinaimg.cn/mw690/e3244c0fly1fz6eik2pggj214o0jewhj.jpg)
+
+## 第 7 天 只出现一次的数字
+- 题号： 136 只出现一次的数字
+- 问题描述：
+ 
+![image](https://wx2.sinaimg.cn/mw690/006fuqy4ly1fz71ykcjqzj30gs09aq32.jpg)
+
+解题思路：
+解题思路：
+第一种思路：一般就是我的思路，一般也是不好的思路。题目要求是线性计算，那么我们只能用一个for循环，题目描述中说明只有一个数出现一次，其他为两次。对于重复元素，我想到了 Set,利用 Set 不能保存相同元素的特性来做。
+
+![image](https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz71zlgqwdj31800lediv.jpg)
+
+第二种思路：这种思路就比较有意思了，虽然上面用了set能够解决问题，但是这种以空间换时间的方式不可取，如果数量很大的时候，很可能造成内存泄漏的问题。这里用了异或运算（XOR），不太明白异或运算的同学可以参考：[Loading](https://www.cnblogs.com/JhSonD/p/6374397.html)。这里异或运算满足交换律、结合律。对于 1^2^...^n^...^n^...^1000，无论这两个n出现在什么位置，都可以转换成为1^2^...^1000^(n^n)的形式。其次，对于任何数x，都有x^x=0，x^0=x。
+
+![image](https://wx3.sinaimg.cn/mw690/006fuqy4ly1fz720ybi0jj31f80pegpu.jpg)
+
+心得体会：很开心完成了刷题打卡的基本任务，虽然我刷的全是easy难度的题目，而且还常常写不出来看大神的解法，但是我也能从这个过程中学习到不少东西，以前畏惧算法一直不敢接近，现在成为一种习惯，就跟玩游戏一样，慢慢积攒实力，打怪升级买装备，最后才能打败boss。希望自己能继续坚持刷题，明年换个不错的公司。
